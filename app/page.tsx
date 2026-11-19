@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brand">
             <LeafIcon className="h-4 w-4" />
-            Micro-learning · 2–3 menit
+            Micro-learning
           </p>
 
           <h1 className="mt-5 max-w-2xl text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl">
