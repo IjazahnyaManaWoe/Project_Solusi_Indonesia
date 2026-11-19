@@ -32,9 +32,9 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Siswa SMAN 19 Bandung sering mencampur sampah karena belum terbiasa
-            memilah. Lewat pelajaran singkat dan kuis, kamu bisa langsung
-            mempraktikkan cara memilah dan mendaur ulang di kelas.
+            Banyak siswa masih mencampur sampah karena belum terbiasa memilah.
+            Lewat pelajaran singkat dan kuis, kamu bisa langsung mempraktikkan
+            cara memilah dan mendaur ulang di kelas.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">

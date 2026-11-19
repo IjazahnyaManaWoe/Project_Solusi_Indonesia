@@ -29,10 +29,10 @@ export default function AboutPage() {
         <section>
           <h2 className="text-xl font-extrabold">Latar belakang</h2>
           <p className="mt-2 text-muted">
-            Di SMAN 19 Bandung, sampah sering tercampur meski siswa sudah diberi
-            tahu. Akibatnya, sampah yang seharusnya bisa didaur ulang menjadi
-            kotor dan bercampur. Karya daur ulang juga mudah rusak, sementara
-            sisa bahan sering tertinggal dan mengotori kelas.
+            Di banyak sekolah, sampah sering tercampur meski siswa sudah tahu
+            cara memilah. Akibatnya, sampah yang seharusnya bisa didaur ulang
+            menjadi kotor dan bercampur. Karya daur ulang juga mudah rusak,
+            sementara sisa bahan sering tertinggal dan mengotori kelas.
           </p>
         </section>
 
