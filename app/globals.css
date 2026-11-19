@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-soft-strong: var(--brand-soft-strong);
+  --color-on-brand: var(--on-brand);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+}
+
+:root {
+  --canvas: #f4faf3;
+  --surface: #ffffff;
+  --ink: #10251a;
+  --muted: #4f6357;
+  --line: #d7e7d8;
+  --brand: #146c3a;
+  --brand-strong: #0e542c;
+  --brand-soft: #e3f5e7;
+  --brand-soft-strong: #c8ecd1;
+  --on-brand: #ffffff;
+  --accent: #7a5100;
+  --accent-soft: #fff3d2;
+  --success: #146c3a;
+  --success-soft: #def5e5;
+  --danger: #b42318;
+  --danger-soft: #fde8e6;
+  --focus: #0b7a3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0b1610;
+    --surface: #122019;
+    --ink: #e8f3ea;
+    --muted: #a8baad;
+    --line: #284132;
+    --brand: #6ee7a0;
+    --brand-strong: #a7f3c4;
+    --brand-soft: #173526;
+    --brand-soft-strong: #1f4a33;
+    --on-brand: #06200f;
+    --accent: #f4c66a;
+    --accent-soft: #34280f;
+    --success: #86efac;
+    --success-soft: #14351f;
+    --danger: #fca5a5;
+    --danger-soft: #3b1717;
+    --focus: #86efac;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--brand-soft-strong);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    border-radius: 9999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    transition: background-color 150ms ease, border-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .btn-primary {
+    background-color: var(--brand);
+    color: var(--on-brand);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--brand-strong);
+  }
+
+  .btn-secondary {
+    background-color: var(--surface);
+    border: 2px solid var(--line);
+    color: var(--ink);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--brand);
+    color: var(--brand);
+  }
+
+  .btn-ghost {
+    color: var(--brand);
+    padding-inline: 0.75rem;
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--brand-soft);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    z-index: 50;
+    border-radius: 0.75rem;
+    background-color: var(--brand);
+    color: var(--on-brand);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+}
+
+/* Tipografi pelajaran Markdown */
+.lesson-content {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+.lesson-content > * + * {
+  margin-top: 1rem;
+}
+
+.lesson-content h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.lesson-content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.lesson-content p {
+  margin-block: 0.9rem;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  margin-block: 0.9rem 1.2rem;
+  padding-left: 1.4rem;
+}
+
+.lesson-content ul {
+  list-style-type: disc;
+}
+
+.lesson-content ol {
+  list-style-type: decimal;
+}
+
+.lesson-content li {
+  margin-block: 0.4rem;
+  padding-left: 0.2rem;
+}
+
+.lesson-content li::marker {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.lesson-content a {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lesson-content strong {
+  font-weight: 700;
+}
+
+.lesson-content blockquote {
+  margin-block: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--brand);
+  border-radius: 0 0.75rem 0.75rem 0;
+  background-color: var(--brand-soft);
+}
+
+.lesson-content blockquote p {
+  margin-block: 0.25rem;
+}
+
+.lesson-content code {
+  border-radius: 0.35rem;
+  background-color: var(--brand-soft);
+  padding: 0.1rem 0.35rem;
+  font-size: 0.9em;
+}
+
+.lesson-content pre {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  background-color: var(--brand-soft);
+  padding: 1rem;
+}
+
+.lesson-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.lesson-content img {
+  width: 100%;
+  height: auto;
+  margin-block: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.lesson-content table {
+  width: 100%;
+  margin-block: 1.3rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.lesson-content th,
+.lesson-content td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.65rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lesson-content th {
+  background-color: var(--brand-soft);
+  font-weight: 700;
+}
+
+.lesson-content hr {
+  margin-block: 2rem;
+  border-color: var(--line);
+}

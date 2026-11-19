@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "botol-plastik",
+    "name": "Botol Plastik",
+    "icon": "GlassWater",
+    "description": "Botol air mineral dan botol minuman lain yang sudah dicuci bersih."
+  },
+  {
+    "slug": "kemasan-snack-kopi",
+    "name": "Kemasan Snack & Kopi",
+    "icon": "Coffee",
+    "description": "Bungkus snack, kopi sachet, dan kemasan lentur lain yang mengkilap."
+  },
+  {
+    "slug": "kardus-kertas",
+    "name": "Kardus & Kertas",
+    "icon": "Package",
+    "description": "Kardus bekas paket, dus sepatu, dan kertas tebal yang masih kokoh."
+  },
+  {
+    "slug": "kaleng",
+    "name": "Kaleng",
+    "icon": "Can",
+    "description": "Kaleng minuman atau kaleng makanan yang sudah dibersihkan."
+  }
+]
